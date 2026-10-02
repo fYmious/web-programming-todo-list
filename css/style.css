@@ -1,0 +1,61 @@
+.app {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.add-form, .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.add-form input[type="text"], .controls input {
+    flex: 1 1 200px;
+}
+
+.record-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.item .text {
+    flex: 1 1 200px;
+    overflow-wrap: anywhere;
+}
+
+.item[draggable="true"] {
+    cursor: grab;
+}
+
+.item.dragging {
+    opacity: 0.4;
+}
+
+.done .text {
+    color: green;
+    text-decoration: line-through;
+}
+
+.notDone .text {
+    color: red;
+}
+
+@media (max-width: 480px) {
+    .add-form > *, .controls > * {
+        flex: 1 1 100%;
+    }
+}
